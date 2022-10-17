@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block content %}
+<div class="home-container">
+    <h1>Keep your task intact</h1>
+    <hr>
+    {% csrf_token %}
+    <table>
+        <thead>
+            <tr>
+                <td><h2>Title</h2></td>
+                <td><td><button class="btn btn-primary"><a href="{% url 'task' %}">Create New Task</a></button> </td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </thead>
+    {% for task in task %}
+        <tbody>
+            <tr>
+                <td>{{task.title}}</td>
+                <td><button class="btn btn-primary"><a href="{% url 'view' task.id %}">Open</a></button> </td>
+                <td><button class="btn btn-primary"><a href="{% url 'delete' task.id %}">Delete</a></button></td>
+                <td><p>Created: {{task.created}} | Updated: {{task.updated}}</p></td>
+            </tr>
+        </tbody>
+    {% endfor %}
+    </table>
+</div>
+
+{% endblock %}

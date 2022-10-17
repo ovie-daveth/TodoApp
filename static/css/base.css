@@ -1,0 +1,36 @@
+body{
+    background-color: aqua;
+}
+.task-container{
+    background-color: aliceblue;
+    position: fixed;
+    top: 150px;
+    right: 700px;
+    padding: 30px;
+}
+.home-container{
+    background-color: aliceblue;
+    position: fixed;
+    top: 150px;
+    right: 400px;
+    padding: 30px;
+}
+.view-container{
+    background-color: aliceblue;
+    position: absolute;
+    width: 700px;
+    top: 150px;
+    right: 400px;
+    padding: 30px;
+}
+tbody td button{
+    margin-left: 10px;
+}
+.btn-primary{
+    background-color: none;
+    color:rgb(106, 106, 243);
+}
+tbody td button a, button a{
+    text-decoration: none;
+    color:rgb(106, 106, 243);
+}
